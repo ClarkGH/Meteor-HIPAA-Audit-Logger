@@ -1,0 +1,1 @@
+@HipaaLog = new Mongo.Collection("hipaaLog")
