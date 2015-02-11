@@ -11,3 +11,5 @@ Template.hipaaLogSubmit.events "submit form": (e) ->
     patientId: $(e.target).find("[name=patientId]").val()
 
   hipaaLog._id = HipaaLog.insert(hipaaLog)
+
+  location.reload()
