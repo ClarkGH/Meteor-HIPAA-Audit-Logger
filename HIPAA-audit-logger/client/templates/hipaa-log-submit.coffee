@@ -1,6 +1,6 @@
 Template.hipaaLogSubmit.events "submit form": (e) ->
   e.preventDefault()
 
-  HipaaLogger.logEvent("Test", "joe", "jill", "bill", "phil", "will", "lill")
+  HipaaLogger.logEvent("fizz", "buzz")
 
-  location.reload()
+  # location.reload()
