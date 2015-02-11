@@ -6,7 +6,10 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
-  <p>insert form here to create log</p>
+  <form class="new-log">
+    <input type="text" name="text" placeholder="eventType">
+    <button>Submit</button>
+  </form>
 </body>
 
 <template name="hello">
