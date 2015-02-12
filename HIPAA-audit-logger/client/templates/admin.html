@@ -1,0 +1,6 @@
+<template name="admin">
+  <p>Only admins can see the secret</p>
+  {{#if isInRole 'admin'}}
+    <p>You're an admin</p>
+  {{/if}}
+</template>
