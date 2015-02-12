@@ -5,7 +5,43 @@
 <body>
   <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
   {{> hipaaLogSubmit}}
 
 </body>
+
+<template name="signIn">
+  <div class="signin">
+    <div class="login-form">
+      <h1>Sign In</h1>
+      {{> loginButtons}}
+    </div>
+
+    <div class="example-users">
+      <p>Normal User: normal@example.com | apple1</p>
+      <p>View Secrets: view@example.com | apple1</p>
+      <p>Manage Users: manage@example.com | apple1</p>
+      <p>Admin User: admin@example.com | apple1</p>
+    </div>
+  </div>
+</template>
+
+
+
+<template name="ifAdmin">
+  <p> Only admins will be able to see this</p>
+  {{roles}}
+</template>
+
+<template name="ifViewSecrets">
+  <p> Admins and secret viewers can see this </p>
+  {{secrets}}
+  {{users}}
+</template>
+
+<template name="ifManageUsers">
+  <p> User managers and admins would be able to see all of the users </p>
+</template>
+
+<template name="ifNormalUser">
+  <p> Normal Users will be able to see this</p>
+</template>
