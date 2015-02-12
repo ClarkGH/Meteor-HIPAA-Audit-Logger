@@ -14,6 +14,9 @@
     <div class="login-form">
       <h1>Sign In</h1>
       {{> loginButtons}}
+      {{#if isInRole 'admin'}}
+        {{> ifAdmin}}
+      {{/if}}
     </div>
 
     <div class="example-users">

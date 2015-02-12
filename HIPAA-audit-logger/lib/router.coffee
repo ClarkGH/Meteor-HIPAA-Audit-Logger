@@ -3,8 +3,8 @@ Router.route '/',
 
 Router.route '/admin',
   name: 'admin'
-  onBeforeAction: ->
-    this.next()
+  # onBeforeAction: ->
+  #   this.next()
 
 # Router.route '/competition/:_id', {
 #     name: 'competition'
