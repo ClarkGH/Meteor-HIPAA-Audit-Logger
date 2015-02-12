@@ -25,33 +25,3 @@ if HipaaLog.find().count() is 0
     recordId: "54323"
     message: "Delicious"
     patientId: "98799"
-
-if Meteor.users.find().fetch().length is 0
-  console.log "Creating users: "
-  users = [
-    name: "Normal User"
-    email: "normal@example.com"
-    roles: []
-  ,
-    name: "View-Secrets User"
-    email: "view@example.com"
-    roles: [ "view-secrets" ]
-  ,
-    name: "Manage-Users User"
-    email: "manage@example.com"
-    roles: [ "manage-users" ]
-  ,
-    name: "Admin User"
-    email: "admin@example.com"
-    roles: [ "admin" ]
-   ]
-  _.each users, (userData) ->
-    id = undefined
-    user = undefined
-    console.log userData
-    id = Accounts.createUser(
-      email: userData.email
-      password: "apple1"
-      profile:
-        name: userData.name
-    )
