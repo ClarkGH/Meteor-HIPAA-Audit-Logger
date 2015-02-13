@@ -4,7 +4,7 @@
     <p>Log populates here</p>
     {{#each residents}}
       <br>
-      {{roomNumber}}
+      <a href="{{pathFor 'updateResidentForm'}}" class="sidebarLinks">{{name}}</a>
       <br>
     {{/each}}
   {{/if}}
