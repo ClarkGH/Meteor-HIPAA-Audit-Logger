@@ -13,10 +13,7 @@ Router.route '/admin',
 Router.route '/log',
   name: 'hipaaLog'
   onRun: ->
-    console.log "Hi"
     if Roles.userIsInRole(Meteor.userId(), [ "admin" ])
-      console.log Meteor.userId()
-      console.log "This is ", Roles.userIsInRole(Meteor.userId(), [ "admin" ])
       this.next()
     else
       this.render('unauthorized')
