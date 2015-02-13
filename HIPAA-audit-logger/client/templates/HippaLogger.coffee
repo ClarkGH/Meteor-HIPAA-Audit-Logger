@@ -1,7 +1,5 @@
 @HipaaLogger = logEvent: (eventType, userId, userName, collectionName, recordId, message, residentId) ->
 
-  console.log "logEvent", eventType, userId, userName, collectionName, recordId, message, residentId
-
   newRecord =
     timestamp: new Date()
     type: eventType
@@ -13,4 +11,4 @@
   newRecord.message = message if message?
   newRecord.residentId = residentId if residentId?
 
-  console.log HipaaLog.insert(newRecord)
+  HipaaLog.insert(newRecord)
