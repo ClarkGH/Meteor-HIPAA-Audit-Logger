@@ -1,2 +1,2 @@
-Template.hipaaLog.helpers posts: ->
+Template.hipaaLog.helpers log: ->
   HipaaLog.find()
