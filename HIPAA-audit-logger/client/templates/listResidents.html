@@ -1,3 +1,11 @@
 <template name="listResidents">
-  <p>List Residents here</p>
+  <p>Must be logged in</p>
+  {{#if isInRole 'normal,admin'}}
+    <p>Log populates here</p>
+    {{#each residents}}
+      <br>
+      {{name}}
+      <br>
+    {{/each}}
+  {{/if}}
 </template>
