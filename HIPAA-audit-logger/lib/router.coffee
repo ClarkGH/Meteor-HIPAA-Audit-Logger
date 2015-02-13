@@ -18,7 +18,8 @@ Router.route '/log',
     else
       this.render('unauthorized')
 
+Router.route '/residents',
+  name: 'listResidents'
 
-
-Router.route '/resident/:_id'
+Router.route '/residents/:_id',
   name: 'updateResidentForm'
