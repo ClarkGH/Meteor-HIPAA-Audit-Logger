@@ -1,3 +1,9 @@
+Router.configure
+  notFoundTemplate: 'notFound'
+  waitOn: ->
+    Meteor.subscribe "users"
+    Meteor.subscribe "hipaaLog"
+
 Router.route '/',
   name: 'signIn'
 
@@ -6,11 +12,14 @@ Router.route '/admin',
 
 Router.route '/log',
   name: 'hipaaLog'
-  onBeforeAction: ->
-    if Roles.userIsInRole(@userId, [ "admin" ])
+  onRun: ->
+    console.log "Hi"
+    if Roles.userIsInRole(Meteor.userId(), [ "admin" ])
+      console.log Meteor.userId()
+      console.log "This is ", Roles.userIsInRole(Meteor.userId(), [ "admin" ])
       this.next()
     else
-      this.render('hipaaLogSubmit')
+      this.render('unauthorized')
 
 # Router.route '/competition/:_id', {
 #     name: 'competition'
