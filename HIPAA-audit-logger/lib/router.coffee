@@ -22,4 +22,6 @@ Router.route '/residents',
   name: 'listResidents'
 
 Router.route '/residents/:_id',
-  name: 'updateResidentForm'
+  name: 'updateResidentForm',
+  data: ->
+    Residents.findOne(@params._id)
