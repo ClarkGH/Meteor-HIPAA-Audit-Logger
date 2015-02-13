@@ -15,7 +15,7 @@ Meteor.startup ->
     users = [
       name: "Normal User"
       email: "normal@example.com"
-      roles: []
+      roles: [ "normal" ]
     ,
       name: "View-Secrets User"
       email: "view@example.com"
