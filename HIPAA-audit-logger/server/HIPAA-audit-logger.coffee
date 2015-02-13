@@ -1,14 +1,8 @@
 Meteor.startup ->
   console.log "There are no events currently in the audit log." if HipaaLog.find().count() is 0
 
-#//////////////////////////////////////////////////////////////////
-# Startup
-#
 Meteor.startup ->
 
-  #//////////////////////////////////////////////////////////////////
-  # Create Test Secrets
-  #
   if Meteor.secrets.find().fetch().length is 0
     Meteor.secrets.insert secret: "ec2 password: apple2"
     Meteor.secrets.insert secret: "domain registration pw: apple3"
