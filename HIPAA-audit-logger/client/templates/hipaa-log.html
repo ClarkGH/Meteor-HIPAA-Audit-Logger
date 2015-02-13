@@ -1,0 +1,10 @@
+<template name="hipaaLog">
+  <p>Must be logged in as Admin</p>
+  {{#if isInRole 'admin'}}
+    <p>Log populates here</p>
+    {{#each log}}
+      <p>hi</p>
+      <br>
+    {{/each}}
+  {{/if}}
+</template>

@@ -3,6 +3,9 @@ Router.route '/',
 
 Router.route '/admin',
   name: 'admin'
+
+Router.route '/log',
+  name: 'hipaaLog'
   # onBeforeAction: ->
   #   this.next()
 
