@@ -1,2 +1,2 @@
-Template.hipaaLog.helpers residents: ->
+Template.listResidents.helpers residents: ->
   Residents.find()
