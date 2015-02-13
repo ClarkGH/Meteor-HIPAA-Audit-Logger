@@ -1,7 +1,7 @@
 if HipaaLog.find().count() is 0
   HipaaLog.insert
     eventType: "Create"
-    userID: "12345"
+    userId: "12345"
     userName: "Star Fox"
     collectionName: "Bleu"
     recordId: "54321"
@@ -10,7 +10,7 @@ if HipaaLog.find().count() is 0
 
   HipaaLog.insert
     eventType: "init"
-    userID: "12323"
+    userId: "12323"
     userName: "Star Wolf"
     collectionName: "Marron"
     recordId: "54322"
@@ -19,7 +19,7 @@ if HipaaLog.find().count() is 0
 
   HipaaLog.insert
     eventType: "delete"
-    userID: "34567"
+    userId: "34567"
     userName: "Star Burrito"
     collectionName: "Violet"
     recordId: "54323"

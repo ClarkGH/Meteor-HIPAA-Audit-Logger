@@ -3,7 +3,17 @@
   {{#if isInRole 'admin'}}
     <p>Log populates here</p>
     {{#each log}}
-      <p>hi</p>
+      {{timestamp}}
+      <br>
+      {{type}}
+      {{userId}}
+      {{userName}}
+      {{recordId}}
+      {{collectionName}}
+      {{message}}
+      {{residentId}}
+
+      <br>
       <br>
     {{/each}}
   {{/if}}
