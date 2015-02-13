@@ -1,2 +1,2 @@
-Template.updateResidentForm.helpers resident: ->
-  Residents.findOne().name
+# Template.updateResidentForm.helpers resident: ->
+#   Residents.findOne().name
