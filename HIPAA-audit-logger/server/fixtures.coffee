@@ -1,27 +1,30 @@
 if HipaaLog.find().count() is 0
   HipaaLog.insert
-    eventType: "Create"
+    timestamp: "This O'Clock"
+    type: "Create"
     userId: "12345"
     userName: "Star Fox"
-    collectionName: "Bleu"
     recordId: "54321"
+    collectionName: "Bleu"
     message: "Timmy didn't eat his peas"
-    patientId: "98765"
+    residentId: "98765"
 
   HipaaLog.insert
-    eventType: "init"
+    timestamp: "More time"
+    type: "init"
     userId: "12323"
     userName: "Star Wolf"
-    collectionName: "Marron"
     recordId: "54322"
+    collectionName: "Marron"
     message: "Can't let you drink that, Starbucks"
-    patientId: "98435"
+    residentId: "98435"
 
   HipaaLog.insert
-    eventType: "delete"
+    timestamp: "Even more time"
+    type: "delete"
     userId: "34567"
     userName: "Star Burrito"
-    collectionName: "Violet"
     recordId: "54323"
+    collectionName: "Violet"
     message: "Delicious"
     patientId: "98799"
