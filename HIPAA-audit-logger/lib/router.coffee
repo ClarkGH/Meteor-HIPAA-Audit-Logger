@@ -7,7 +7,7 @@ Router.route '/admin',
 Router.route '/log',
   name: 'hipaaLog'
   onBeforeAction: ->
-    if 1 is 0
+    if Roles.userIsInRole(@userId, [ "admin" ])
       this.next()
     else
       this.render('hipaaLogSubmit')
