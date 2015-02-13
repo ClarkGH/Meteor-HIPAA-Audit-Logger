@@ -28,3 +28,16 @@ if HipaaLog.find().count() is 0
     collectionName: "Violet"
     message: "Delicious"
     patientId: "98799"
+
+if Residents.find().count() is 0
+  Residents.insert
+    name: "Mario"
+    roomNumber: "142"
+
+  Residents.insert
+    name: "Luigi"
+    roomNumber: "123"
+
+  Residents.insert
+    name: "Koopa"
+    roomNumber: "132"
