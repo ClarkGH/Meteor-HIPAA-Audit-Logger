@@ -6,8 +6,11 @@ Router.route '/admin',
 
 Router.route '/log',
   name: 'hipaaLog'
-  # onBeforeAction: ->
-  #   this.next()
+  onBeforeAction: ->
+    if 1 is 0
+      this.next()
+    else
+      this.render('hipaaLogSubmit')
 
 # Router.route '/competition/:_id', {
 #     name: 'competition'
